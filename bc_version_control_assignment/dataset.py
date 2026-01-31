@@ -16,14 +16,22 @@ def main(
     output_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
     # ----------------------------------------------
 ):
-    # ---- REPLACE THIS WITH YOUR OWN CODE ----
-    logger.info("Processing dataset...")
-    for i in tqdm(range(10), total=10):
-        if i == 5:
-            logger.info("Something happened for iteration 5.")
+    import pandas as pd  # Top imports unchanged
+
+    logger.info(f"Reading data from {input_path}")
+    df = pd.read_csv(input_path)
+
+    # Small cleaning step: drop the first column
+    column_to_drop = df.columns[0]
+    logger.info(f"Dropping column: {column_to_drop}")
+    df = df.drop(columns=[column_to_drop])
+
+    logger.info(f"Writing cleaned data to {output_path}")
+    df.to_csv(output_path, index=False)
+
     logger.success("Processing dataset complete.")
-    # -----------------------------------------
 
 
 if __name__ == "__main__":
     app()
+
