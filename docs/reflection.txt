@@ -1,0 +1,16 @@
+Reflection – Step 9 Analysis
+
+For Step 9, I conducted a simple exploratory data analysis using a Jupyter notebook.
+The notebook is saved at:
+
+notebooks/step9_analysis.ipynb
+
+In the analysis, I loaded the processed dataset from:
+data/processed/dataset.csv
+
+I computed basic summary statistics by calculating the mean of all numeric columns.
+This step was intentionally simple and focused on practicing how processed data
+flows into downstream analysis using the Cookiecutter Data Science project structure.
+
+This demonstrates how cleaned and versioned data can be reused for reproducible
+analysis.

@@ -1,0 +1,6 @@
+Next Steps
+
+- Create visualizations summarizing key population trends
+- Do a more thorough exploratory analysis
+- Group neighborhoods with similar characteristics using K-Means clustering
+- Run a PCA to understand main drivers of variation across neighborhoods
